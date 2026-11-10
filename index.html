@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TITI | Results & Financial Ledger</title>
+
+<style>
+:root {
+  --maroon: #7A1220;
+  --navy: #0F2A5E;
+  --gold: #D4AF37;
+  --white: #FFFFFF;
+  --grey: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--grey);
+  color: var(--navy);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--white);
+  padding: 20px 7%;
+  border-bottom: 4px solid var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  background: var(--maroon);
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+header h1 {
+  font-size: 21px;
+  color: var(--maroon);
+}
+
+header p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: var(--navy);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 18px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  background: white;
+  padding: 38px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.login-card h2 {
+  text-align: center;
+  color: var(--maroon);
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.intro {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 18px 0 8px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--maroon);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: var(--maroon);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--navy);
+}
+
+.modules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.module {
+  background: var(--grey);
+  padding: 17px 10px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.module span {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 9px;
+}
+
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+@media(max-width:480px) {
+  header {
+    padding: 16px;
+  }
+  header h1 {
+    font-size: 17px;
+  }
+  .login-card {
+    padding: 25px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">TITI</div>
+  <div>
+    <h1>TAHIDI INTERNATIONAL</h1>
+    <p>TRAINING INSTITUTE</p>
+  </div>
+</header>
+
+<main>
+  <section class="login-card">
+
+    <h2>STUDENT PORTAL</h2>
+
+    <p class="intro">
+      Academic Results & Automated Financial Ledgers<br>
+      BREAKING THE LIMITS
+    </p>
+
+    <form id="loginForm">
+
+      <label for="reg">Registration Number</label>
+      <input
+        type="text"
+        id="reg"
+        placeholder="Enter your registration number"
+        required
+      >
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        required
+      >
+
+      <button type="submit">STUDENT SIGN IN</button>
+
+    </form>
+
+    <div class="modules">
+      <div class="module">
+        <span>📚</span>
+        ACADEMIC RESULTS
+      </div>
+
+      <div class="module">
+        <span>💳</span>
+        FINANCIAL LEDGER
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <strong>TAHIDI INTERNATIONAL TRAINING INSTITUTE</strong><br>
+  BREAKING THE LIMITS<br>
+  Student Results & Financial Management System
+</footer>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("The login interface is ready. Database authentication will be activated after Supabase configuration.");
+});
+</script>
+
+</body>
+</html>
